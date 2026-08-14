@@ -6,3 +6,5 @@ function generateLog() {
     console.log('add red color');
 }
 generateLog();
+
+console.log('Teste prático rebase');
