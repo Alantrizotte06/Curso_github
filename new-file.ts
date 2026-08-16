@@ -1,1 +1,1 @@
-console.log('New button');
+console.log('New change hook.');
