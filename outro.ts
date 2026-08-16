@@ -1,1 +1,1 @@
-console.log('Teste hook mgs commit');
+console.log('Teste hook msg commit');
