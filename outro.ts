@@ -1,1 +1,1 @@
-console.log('Outro button');
+console.log('Teste hook mgs commit');
