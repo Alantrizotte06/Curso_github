@@ -1,1 +1,1 @@
-console.log('New change hook msg.');
+console.log('New change hook msg 2.');
