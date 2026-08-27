@@ -1,3 +1,3 @@
 console.log('Hello world 1');
 
-console.log('test');
+console.log('testando conflitos.');
