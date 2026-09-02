@@ -208,3 +208,37 @@ git remote add //Comando executado para direcionar o repositório remoto do proj
 git push origin main //Envia os commits da branch main local para a branch main do repositório remoto origin.
 git remote remove //Utilizado para remover o repositório remoto.
 ```
+
+---
+
+August 23, 2026 
+
+## Pull Request
+
+O pull request (PR) é utilizado para quando queremos enviar alterações de alguma branch para a branch **main**
+
+## Git fetch
+
+É utilizado para trazer as alterações do repositório remoto.
+
+---
+
+September 1, 2026 
+
+## Histórico de Log e Alterações
+
+Para verificar as alteração de todos os commits de um arquivo especifico é necessário realizar o seguinte comando:
+
+```jsx
+git log -p -- themes/exemplo.html //Comando para verificar alterações e commits, o -- serve como boa prática para evitar ambiguidades entre nome de branch e arquivos.
+git blame -p -- themes/exemplo.html //Comando para exibir detalhamento de quem realizou a alteração, commit e quais linhas foram alteradas
+
+```
+
+## Git cherry-pick
+
+Serve para copiar um commit específico de qualquer branch e aplicá-lo na sua branch atual. Segue o comando:
+
+```jsx
+git cherry-pick (hash do commit) //Este comando vai cópiar as alterações de um commit especifico da branch exemplo para a atual, deve ser inserido o hash do commit. 
+```
