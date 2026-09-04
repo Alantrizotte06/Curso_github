@@ -267,3 +267,29 @@ git reset HEAD~1 //Aqui estamos retornar no ultimo commit realizado, HEAD~ é ut
 git reset --hard HEAD~1 //Este comando é realizado para realmente apagar o ultimo commit e também as alterações realizadas nele.
 git reset git-curso/themes/index.html HEAD~1 //Também podemos utilizar o reset para arquivos por exemplo fiz uma alteração em dois arquivos diferentes, posso retornar o arquivo desejado seguindo este comando indicando o arquivo e também qual foi o commit.
 ```
+
+## Recuperando alterações
+
+Caso seja executado o comando git reset —hard e apagou algo indesejado é algo bem simples de ser corrigido, segue o comando:
+
+```jsx
+git reflog //Serve para registrar todo e qualquer movimento do indicador HEAD no ambiente local.
+git reset --hard HEAD@{1} //Serve para recuperar a ultima movimentação do indicador HEAD, após isso será recuperada a alteração apagada.
+```
+
+## Desfazendo mudanças
+
+Essas alternativas são para quando não será necessário subir as alterações para o repositório remoto:
+
+```jsx
+git restore index.html //Após executar este comando será desfeita toda alteração realizada no arquivo index.
+git checkout . //Após executar esse código será desfeita toda alteração realizada em todos os arquivos.
+```
+
+## Apagando arquivos não rastreados
+
+```jsx
+git clean -n -d //Este comando vai me trazer pastas/arquivos que não contem nenhum conteúdo dentro para serem removidas.
+git clean -f //Remove arquivos vazios que não estão sendo rastreados pelo git.
+git clean -f -d //Remove arquivos/pastas vazias que também não estão sendo rastreados pelo git.
+```
