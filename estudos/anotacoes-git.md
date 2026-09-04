@@ -242,3 +242,28 @@ Serve para copiar um commit específico de qualquer branch e aplicá-lo na sua b
 ```jsx
 git cherry-pick (hash do commit) //Este comando vai cópiar as alterações de um commit especifico da branch exemplo para a atual, deve ser inserido o hash do commit. 
 ```
+
+---
+
+September 3, 2026 
+
+## Git Stash
+
+Como foi visto anteriormente o git stash serve para salvar o código localmente sem precisar subir para o repositório remoto. Mas anteriormente não foi especificado que poderiamos salvar com o nome da alteração realizada, segue o comando:
+
+```jsx
+git stash save "alterando a cor do tema dark" //Aqui adicionamos o comentário da tarefa por exemplo alterando a cor do tema dark.
+git stash pop //Aplica ao ultimo stash (stash@{0}) e o remove da lista automaticamente.
+git stash apply //Aplica o stash mas mantem ele salvo na lista para uso futuro.
+git stash pop stash@{1} //Para buscar um stash especifico da fila.
+```
+
+## Git Reset
+
+É utilizado retornar as alterações realizadas antes do comando git push (funcional apenas para quando o commit não é enviado ao repositório remoto), caso tenha sido alterado alguma alteração indesejada, importante lembrar que apenas o commit é desfeito porém as alterações ainda continuam na área de staging, segue o comando:
+
+```jsx
+git reset HEAD~1 //Aqui estamos retornar no ultimo commit realizado, HEAD~ é utilizado para escolher qual o commit com a alteração realizada.
+git reset --hard HEAD~1 //Este comando é realizado para realmente apagar o ultimo commit e também as alterações realizadas nele.
+git reset git-curso/themes/index.html HEAD~1 //Também podemos utilizar o reset para arquivos por exemplo fiz uma alteração em dois arquivos diferentes, posso retornar o arquivo desejado seguindo este comando indicando o arquivo e também qual foi o commit.
+```
